@@ -9,7 +9,7 @@
 */
 
 //CODE HERE
-
+const myArr = [4,'abc',['cat','dog','bird'],77]
 
 ////////////////////PROBLEM 2////////////////////
 /*
@@ -21,7 +21,7 @@
 const nestedLetters = ['m', 'g', 'e', 'q', 'h', ['n', 'b', ['v', 'z', 'y', 'r']], 'a']
 
 //CODE HERE
-
+let foundZ = nestedLetters[5][2][1]
 
 ////////////////////PROBLEM 3////////////////////
 /*
@@ -37,7 +37,7 @@ const desert = ['rattlesnake', 'coyote']
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
+const animals = [...forest,...ocean,...savannah, ...desert]
 
 /*
     Now use the spread operator to make a copy of your animals array.
@@ -45,7 +45,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-
+const animalsCopy = [...animals,'elephant']
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -56,7 +56,13 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-
+const compareNums = (num1,num2) => {
+    if(num1 === num2 || num1 > num2) {
+        return num1
+    } else {
+   return num2
+    }
+}
   
 ////////////////////PROBLEM 5////////////////////
 /*
@@ -68,7 +74,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  const bestMovie = movie => `${movie} is the best movie ever!`
   
 ////////////////////PROBLEM 6////////////////////
 /*
@@ -76,7 +82,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  const jsNinja = () => 'I am a JavaScript ninja!'
 
 ////////////////////PROBLEM 7////////////////////
 
@@ -97,7 +103,7 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  delete gameInfo.rating
 
 ////////////////////PROBLEM 8////////////////////
 
@@ -119,7 +125,11 @@ const desert = ['rattlesnake', 'coyote']
 */
 
 //CODE HERE
-  
+  for(let key in shapes){
+      if(shapes[key] % 2 !== 0) {
+        delete shapes[key]
+      }
+  }
   
 ////////////////////PROBLEM 9////////////////////
 
@@ -161,7 +171,13 @@ const classes = [
 */
 
 //CODE HERE
-
+for(let i = 0; i < classes.length; i++){
+    for(let key in classes[i]){
+        if(classes[i][key]){
+            classes[i][key] = false
+        }
+    }
+}
   
 ////////////////////PROBLEM 10////////////////////
 /*
@@ -177,7 +193,13 @@ let pairsArray = []
 //DO NOT EDIT CODE ABOVE
 
 //CODE HERE
-
+for(let i = 0; i < lettersToPair.length; i++){
+    for(let j = lettersToPair.length-1; j > i; j--){
+        if(lettersToPair[i] === lettersToPair[j]){
+            pairsArray.push([i,j])
+        }
+    }
+}
     
 
 //////////////////////////////////PROBLEMS 11-14//////////////////////////////////
@@ -194,7 +216,12 @@ let pairsArray = []
 */
 
 //CODE HERE
-
+function Dog(name,age,breed,tricks) {
+    this.name = name;
+    this.age = age;
+    this.breed = breed;
+    this.tricks= tricks
+}
 
 /*
     Invoke your dog constructor passing in 'Fido' for the name, 3 for the age, 
@@ -203,7 +230,7 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
+ let fido = new Dog('Fido',3,'Jack Russell',['sit','shake'])
 
 ////////////////////PROBLEM 12////////////////////
 /*
@@ -213,7 +240,10 @@ let pairsArray = []
 */
 
 //CODE HERE
-
+const bark = ()=>{
+    Dog.call()
+    return `${this.name} says bark!`
+}
 
 /*
     Invoke the call method on bark, passing in fido as the context
@@ -221,8 +251,7 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
-  
+ 
 ////////////////////PROBLEM 13////////////////////
 /*
     Write a function called 'teachTrick' that will take in one parameter, trick, 
@@ -232,7 +261,12 @@ let pairsArray = []
 */
 
 //CODE HERE
-
+const teachTrick = (trick)=> {
+let tricks =[]
+tricks.push(trick)
+return tricks
+teachTrick.bind()
+}
 
 /*
     Invoke the bind method on teachTrick, passing in fido as the context and the string 'stay' as a trick.
@@ -240,7 +274,7 @@ let pairsArray = []
 */
 
 //CODE HERE
-  
+teachTrick(fido)
   
 ////////////////////PROBLEM 14////////////////////
 /*
@@ -271,7 +305,13 @@ let pairsArray = []
 
 //CODE HERE
 
-  
+  function Phone(brand,model,storage,color,sold){
+      this.brand = brand
+      this.model = model
+      this.storage = storage
+      this.color = color
+      this.sold = sold
+  }
 /*
     Next make three new phones using your constructor function.
     Save them to the variables below (make sure you uncomment them).
@@ -284,11 +324,11 @@ let pairsArray = []
 */
 
 //CODE HERE
-  // let phone1 = 
+  let phone1 = new Phone('motorola','razor',4,'red',false)
   
-  // let phone2 = 
+  let phone2 = new Phone('Apple','Iphone',100,'white',true)
   
-  // let phone3 = 
+  let phone3 = new Phone('Samsung','what',4344444,'yello',false)
   
 /*
     Last, add a prototype method to Phone.

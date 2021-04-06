@@ -36,7 +36,10 @@ let foods = [
 */
 
 //CODE HERE
-
+foods.forEach(ele => {
+  let calories = (ele.carbs*4)+(ele.protein*4)+(ele.fat*9)
+  ele.calories = calories 
+})
 //////////////////////////////////PROBLEMS 2-4//////////////////////////////////
 /*
   For problems 2-4, you will be working with the products array below.
@@ -81,7 +84,13 @@ const products = [
 */
 
 //CODE HERE
-
+const saleProducts = products.map((ele) => {
+  let newObj = {}
+  newObj.name = ele.name;
+    newObj.color = ele.color;
+    newObj.price = ele.price *0.75;
+  return newObj
+})
 ////////////////////PROBLEM 3////////////////////
 /*
   A customer has placed an order - they want one of every product that has blue on it. 
@@ -91,6 +100,7 @@ const products = [
 */
 
 //CODE HERE
+const blueProducts = saleProducts.filter(ele => ele.color === 'blue')
 
 ////////////////////PROBLEM 4////////////////////
 /*
@@ -100,7 +110,11 @@ const products = [
 */
 
 //CODE HERE
-
+const orderTotal = blueProducts.reduce((acc,ele)=>{
+  if(blueProducts.includes('blue')){
+    acc+=ele
+  }
+},0)
 //////////////////////////////////PROBLEMS 5-8//////////////////////////////////
 /*
   For these problems we will be using the objects below, contactInfo and shippingInfo,

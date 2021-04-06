@@ -1,10 +1,125 @@
+body{
+    background-color:rgb(255, 255, 255) (default value) ;
+    width: 100vw;
+}
+
+#main{
+    display:flex;
+    height: fit-content;
+}
+header{
+    background-color: cadetblue;
+    height: 2vh;
+    display:flex;
+    justify-content: space-between;
+    padding:10px
+}
+
+#h{
+    padding-left: 20px;
+}
+nav{
+    display:flex;
+    float:right
+
+}
+
+#leftColumn{
+    width: 70%;
+}
+#rightColumn{
+    width:30%;
+    height:61vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+#skills{
+padding-top:20px;
+margin-left:100px
+}
+#p{
+    margin-left:100px;
+    padding-top:20px;
+}
+
+#profile{
+    background-color: aqua;
+    width: 16vw;
+    height: 23vh;
+    margin-bottom: 3vh;
+    margin-top: -3.3vh;
+    box-shadow:  3px 3px 5px 6px #ccc;
+}
+
+#articles{
+background-color: aqua;
+width: 16vw;
+height: 26vh;
+box-shadow:    3px 3px 5px 6px #ccc;
+}
+#heads{
+    padding-top:1vh;
+    margin-left: 100px;
+    display: flex;
+    flex-direction:column;
+}
+#gallery{
+    display:flex;
+justify-content: space-around;
+flex-wrap: wrap;
+padding:20px;
+margin-left: 100px;
+}
+
+#img{
+    width:15vw;
+    height: 10vh;
+    background-color: plum;
+    margin-bottom:2vh
+
+}
+
+footer{
+    background-color: rgb(42, 171, 226);
+    height: 5vh;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right:5px
+}
+
+#circle{
+float:right;
+height: 3vh;
+width: 3vw;
+background-color: rgba(0, 0, 0, 0);
+color:aliceblue;
+border-radius: 50%;
+border-style: double;
+border-color: black;
+border-width: 1px;
+display:flex;
+justify-content: center;
+align-items: center;
+}
+
+
+
+
+
+
+
+
 /* 
 
 these are the colors used in the example
 ***you can use them if you'd like or you can choose your own***
 
 black - rgb(37, 37, 37)
-blue - rgb(42, 171, 226)
+blue - 
 shadow - rgba(102, 75, 75, .3)
 white - rgb(255, 255, 255) (default value) 
 
